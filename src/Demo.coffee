@@ -8,25 +8,25 @@ class Demo
   run: () ->
     @client.connect();
 
-    # Attempt to reconnect when the connection is dropped
+    # Attempt to reconnect when the connection is dropped.
     @client.on 'disconnect', =>
       @client.reconnect()
 
-    # Subscript to posts and comments when connected
+    # Subscripe to posts and comments when connected.
     @client.on 'connect', =>
       @client.subscribe 'posts'
       @client.subscribe 'comments'
 
-    # Print a comment when it is received
+    # Print a comment when it is received.
     @client.on 'comment', (comment) =>
       @print comment
 
-    # Print a post when it is received
+    # Print a post when it is received.
     @client.on 'post', (post) =>
       @print post
 
 
-  # Pads a string to a target length with whitespace to the right
+  # Pads a string to a target length with whitespace to the right.
   rpad: (string, targetLength) ->
     if string.length <= targetLength
       for _ in [0...targetLength - string.length]
