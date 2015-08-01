@@ -1,4 +1,8 @@
 
+This is a demo for [rockets](https://github.com/rtheunissen/rockets).
+
+---
+
 ```bash
 npm install rockets-demo
 cd node_modules
