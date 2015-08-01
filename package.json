@@ -1,0 +1,34 @@
+{
+  "name": "rockets-demo",
+  "version": "1.0.0",
+  "description": "Demo for 'rockets'",
+  "license": "MIT",
+  "keywords": [
+    "rockets",
+    "reddit",
+    "demo"
+  ],
+  "author": {
+    "name": "Rudi Theunissen",
+    "email": "rudolf.theunissen@gmail.com",
+    "url": "https://github.com/rtheunissen"
+  },
+  "dependencies": {
+    "rockets": "^1.0.0",
+    "colors": "^1.1.2"
+  },
+  "dev-dependencies": {
+    "coffee-script": "^1.9.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rtheunissen/rockets-demo"
+  },
+  "bugs": {
+    "url": "https://github.com/rtheunissen/rockets-demo/issues"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "prepublish": "coffee -o lib/ -c src/"
+  }
+}
