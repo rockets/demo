@@ -14,7 +14,7 @@
     "url": "https://github.com/rtheunissen"
   },
   "dependencies": {
-    "rockets": "^1.0.0",
+    "rockets": "^1.1.0",
     "colors": "^1.1.2"
   },
   "dev-dependencies": {
