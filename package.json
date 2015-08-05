@@ -1,6 +1,6 @@
 {
   "name": "rockets-demo",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Demo for 'rockets'",
   "license": "MIT",
   "keywords": [
@@ -17,7 +17,7 @@
     "rockets": "^1.1.0",
     "colors": "^1.1.2"
   },
-  "dev-dependencies": {
+  "devDependencies": {
     "coffee-script": "^1.9.3"
   },
   "repository": {

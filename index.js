@@ -1,5 +1,6 @@
 require('colors');
 
 Client = require('rockets');
+Demo   = require('./lib/Demo.js');
 
-require('./lib/Demo.js').run();
+new Demo().run();

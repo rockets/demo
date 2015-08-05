@@ -1,21 +1,19 @@
-#
-class Demo
+module.exports = class Demo
 
   constructor: () ->
     @client = new Client()
 
-  # Runs the demo
-  run: () ->
-    @client.connect();
 
-    # Attempt to reconnect when the connection is dropped.
-    @client.on 'disconnect', =>
-      @client.reconnect()
+  run: () ->
 
     # Subscripe to posts and comments when connected.
     @client.on 'connect', =>
       @client.subscribe 'posts'
       @client.subscribe 'comments'
+
+    # Attempt to reconnect when the connection is dropped.
+    @client.on 'disconnect', =>
+      @client.reconnect()
 
     # Print a comment when it is received.
     @client.on 'comment', (comment) =>
@@ -24,6 +22,12 @@ class Demo
     # Print a post when it is received.
     @client.on 'post', (post) =>
       @print post
+
+    # Attempt to reconnect when the connection is dropped.
+    @client.on 'error', (err) ->
+      console.error err
+
+    @client.connect()
 
 
   # Pads a string to a target length with whitespace to the right.
@@ -69,6 +73,3 @@ class Demo
     subr = 'r/' + @rpad(subr, 22).red.bold
 
     console.log "[#{time}] #{type} by #{user} in #{subr} #{length}".grey
-
-
-module.exports = new Demo()
